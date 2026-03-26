@@ -1,7 +1,18 @@
-def celsius_to_fahrenheit(celsius):
-    """Convertit les Celsius en Fahrenheit."""
-    return (celsius * 9/5) + 32
-
 def est_ce_qu_il_gele(celsius):
-    """Renvoie True si la température est à 0 ou en dessous."""
+    """Logique : Vérifie si la température est <= 0."""
     return celsius <= 0
+
+
+# Cette partie ne s'exécute que si tu lances le fichier directement
+if __name__ == "__main__":
+    print("Météo Norvégienne")
+    
+    reponse = input("Quelle température fait-il dehors (en °C) ? ")
+    
+    # On transforme le texte en nombre (float) pour pouvoir calculer
+    temperature = float(reponse)
+    
+    if est_ce_qu_il_gele(temperature):
+        print("Résultat : L'eau est gelée. Attention !")
+    else:
+        print("Résultat : L'eau n'est pas gelée. Il fait doux.")
